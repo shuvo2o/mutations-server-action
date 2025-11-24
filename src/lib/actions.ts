@@ -5,6 +5,7 @@ import User from "./models/User";
 
 export const crateUser = async (formData: FormData) => {
     await dbConnect();
+    await new Promise(resolve =>setTimeout(resolve, 1000))
         const name = formData.get("name") as string;
         const email = formData.get("email") as string;
         console.log("Name:", name);
