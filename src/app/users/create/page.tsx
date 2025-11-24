@@ -1,4 +1,5 @@
 "use client"
+import SubmitButton from '@/app/components/SubmitButton';
 import { crateUser } from '@/lib/actions';
 import React, { useRef } from 'react'
 
@@ -23,7 +24,7 @@ const CreateUserPage = () => {
                 <form ref={formRef} action={handelSubmit}>
                     <input type="text" name='name' placeholder='Enter name' required className='w-full p-2 mb-4 border border-gray-300 rounded-md' />
                     <input type="email" name='email' placeholder='Enter email' required className='w-full p-2 mb-4 border border-gray-300 rounded-md' />
-                    <button className='bg-blue-500 text-white p-2 w-full hover:bg-blue-700 cursor-pointer rounded-md'>Create User</button>
+                    <SubmitButton/>
                 </form>
             </div>
 
