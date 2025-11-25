@@ -1,14 +1,14 @@
 "use client"
 import SubmitButton from '@/app/components/SubmitButton';
-import { crateUser } from '@/lib/actions';
+import { createUser } from '@/lib/actions';
 import React, { useRef } from 'react'
 
 const CreateUserPage = () => {
     const formRef = useRef<HTMLFormElement>(null);
     const handelSubmit = async (formData: FormData) =>{
-        const result = await crateUser(formData);
-        console.log("User created Succesfully", result)
-        if(result.succes){
+        const result = await createUser(formData);
+        console.log("User created Successfully", result)
+        if(result.success){
             alert(result.message);
             formRef.current?.reset()
         }else{
